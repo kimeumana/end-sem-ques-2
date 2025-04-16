@@ -76,11 +76,9 @@ a:hover, a:focus {
 }
 
 .logo {
-    width: 60px;
-    height: 60px;
-    background-color: #fff;
-    border-radius: 50%;
-    /* Placeholder for actual logo */
+    width: 80px;
+    height: auto;
+    /* Actual logo now used */
 }
 
 .header-text {
@@ -203,12 +201,28 @@ main {
 footer {
     background-color: #003366;
     color: white;
-    text-align: center;
     padding: 2rem;
     margin-top: 3rem;
 }
 
-footer p {
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-logo {
+    width: 60px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1); /* Make logo white in the footer */
+}
+
+.footer-text p {
     margin-bottom: 0.5rem;
     opacity: 0.9;
 }
