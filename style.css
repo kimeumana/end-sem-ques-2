@@ -160,12 +160,20 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.faculty-email {
+.faculty-email, .faculty-contact {
     margin-bottom: 1rem;
 }
 
-.faculty-email a {
+.faculty-email a, .faculty-contact a {
     display: inline-block;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+/* Phone number styling */
+.faculty-contact a[href^="tel"] {
+    display: inline-block;
+    color: #005580;
     font-weight: 500;
 }
 
