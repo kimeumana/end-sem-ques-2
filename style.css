@@ -1,0 +1,283 @@
+/* 
+ * Faculty Profile Styles for USIU-Africa SST
+ * A responsive, accessible design for faculty profiles
+ */
+
+/* === Base Styles and Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 0;
+    margin: 0;
+}
+
+/* === Typography === */
+h1, h2, h3 {
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    color: #003366; /* USIU-Africa brand color */
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #004080;
+    text-decoration: underline;
+}
+
+/* === Layout Components === */
+
+/* Header Styles */
+.site-header {
+    background-color: #003366; /* USIU-Africa brand color */
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo-container {
+    margin-right: 1.5rem;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    /* Placeholder for actual logo */
+}
+
+.header-text {
+    flex: 1;
+}
+
+.subtitle {
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.faculty-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Faculty Profiles Grid Layout */
+.faculty-profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Faculty Card Styles */
+.faculty-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-card:hover, .faculty-card:focus-within {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-color: #f8f9fa; /* Subtle background change on hover */
+}
+
+.profile-image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* We're using object-fit to ensure the image covers the container properly */
+}
+
+.faculty-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.faculty-name {
+    margin-top: 0;
+}
+
+.faculty-title {
+    color: #555;
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.faculty-email {
+    margin-bottom: 1rem;
+}
+
+.faculty-email a {
+    display: inline-block;
+    font-weight: 500;
+}
+
+/* Research Interests Styling */
+.research-interests {
+    margin-top: auto; /* Push to bottom of flex container */
+}
+
+.interest-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.interest-tags li {
+    background-color: #e6f0ff; /* Light blue background */
+    color: #003366;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-block;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+/* === Responsive Adjustments === */
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 768px) {
+    .faculty-profiles {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .logo-container {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    main {
+        padding: 1.5rem;
+    }
+}
+
+/* Small screens (mobile phones) */
+@media screen and (max-width: 480px) {
+    .faculty-profiles {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.3rem;
+    }
+    
+    .site-header {
+        padding: 1rem;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    .faculty-intro {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* === Accessibility Enhancements === */
+:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* High contrast focus for keyboard navigation */
+a:focus, button:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: 2px;
+}
+
+/* Better visibility for active elements */
+a:active {
+    color: #002b55;
+}
+
+/* Ensure text remains readable when font size is increased */
+html {
+    font-size: 100%; /* Allows user browser settings to control base font size */
+}
